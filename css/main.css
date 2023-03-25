@@ -25,7 +25,7 @@ div {
   font-size: 40px;
 }
 
-/*========TEST - BEGIN=======/*
+/*========TEST - BEGIN=======*/
 .topnav {
   overflow: hidden;
   background-color: #333;
@@ -128,7 +128,7 @@ div {
     text-align: left;
   }
 }
-/*========TEST - END=======/*
+/*========TEST - END=======*/
 
 /* Right-aligned link */
 /*.navbar a.right {
