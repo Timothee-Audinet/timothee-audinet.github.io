@@ -115,12 +115,12 @@ div {
   display: block;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 16px) {
   .topnav a:not(:first-child), .dropdown .dropbtn {
     display: none;
   }
   .topnav a.icon {
-    float: right;
+    float: left;
     display: block;
   }
 }
