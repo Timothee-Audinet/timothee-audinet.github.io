@@ -247,7 +247,7 @@ div.content {
 
 /* Add a red background color to navigation links on hover */
 .navbar a:hover, .subnav:hover .subnavbtn {
-  background-color: blackgreen;
+  background-color: black;
 }
 
 /* Style the subnav content - positioned absolute */
