@@ -182,14 +182,7 @@ padding: 0;
 
 /* Subnav button */
 .subnav .subnavbtn {
-  font-size: 16px;
-  border: none;
-  outline: none;
-  color: white;
-  padding: 14px 16px;
-  background-color: inherit;
-  font-family: inherit;
-  margin: 0;
+  float:right;
 }
 
 /* Add a red background color to navigation links on hover */
