@@ -193,7 +193,7 @@ padding: 0;
 }
 
 /* Add a red background color to navigation links on hover */
-.topnav a:hover, .subnav:hover .subnavbtn {
+.navbar a:hover, .subnav:hover .subnavbtn {
   background-color: black;
 }
 
