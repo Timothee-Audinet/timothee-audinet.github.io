@@ -88,7 +88,7 @@ div {
   position: absolute;
   background-color: #f9f9f9;
   min-width: 16px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 12px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
 }
 
@@ -250,7 +250,7 @@ div.content {
 
 
 
-/*===================== CV =====================*/
+/*===================== CV BEGIN =====================*/
 dl.cv { 
 margin: 1em; 
 padding: 0;
@@ -291,5 +291,31 @@ font-weight: bold;
 dl.cvtop dd {
 margin: 0 0 0 14em;
 padding: 0;
+}
+/*===================== END =====================*/
+
+/*===================== GALLERIE BEGIN =====================*/
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* espace entre les colonnes */
+  width: 100%; /* ou taille fixe */
+}
+
+.gallery li {
+  margin-bottom: 20px;
+  width: calc(25% - 20px); /* 4 images sur une ligne */
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
+}
+
+.gallery li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
 }
 /*===================== END =====================*/
