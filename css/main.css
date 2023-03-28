@@ -116,7 +116,7 @@ nav ul ul a:hover {
   padding: 14px 16px;
   background-color: inherit;
   font-family: inherit;
-  margin: 0;
+  margin: 70%;
 }
 
 .dropdown-content {
@@ -134,7 +134,7 @@ nav ul ul a:hover {
   padding: 12px 16px;
   text-decoration: none;
   display: block;
-  text-align: center; /*left*/
+  text-align: left;
 }
 
 .topnav a:hover, .dropdown:hover .dropbtn {
