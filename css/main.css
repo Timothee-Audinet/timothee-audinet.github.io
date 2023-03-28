@@ -66,11 +66,46 @@ div {
 }
 
 
+/*==============TEST2 END==============*/
+nav ul li {
+  position: relative;
+  display: inline-block;
+}
+nav ul li:hover > ul {
+  display: block;
+}
+nav ul ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  padding: 0;
+  margin: 0;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+nav ul ul li {
+  display: block;
+  float: none;
+  width: 100%;
+}
+nav ul ul a {
+  padding: 10px;
+  display: block;
+  color: #333;
+  text-decoration: none;
+}
+nav ul ul a:hover {
+  background-color: #f2f2f2;
+}
+/*==============TEST2 END==============*/
+
+
 /*==============TEST==============*/
 .dropdown {
   float: left;
   overflow: hidden;
-  text-align: center;
+  text-align: left;
 }
 
 .dropdown .dropbtn {
@@ -86,7 +121,7 @@ div {
 
 .dropdown-content {
   display: none;
-  position: absolute;
+  position: left;
   background-color: #f9f9f9;
   min-width: 16px;
   box-shadow: 0px 12px 16px 0px rgba(0,0,0,0.2);
