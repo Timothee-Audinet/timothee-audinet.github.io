@@ -14,7 +14,7 @@ div {
 
 div2 {
     /* width: 100%; */
-    width: 16px;
+    width: auto;
     text-align: justify;
     margin: 0 auto;
     color:#23373b
@@ -96,7 +96,7 @@ div2 {
   font-size: 16px;
   border:none;
   outline:none;
-  color: white;
+  color: grey;
   padding: 14px 16px;
   background-color: inherit;
   font-family: inherit;
