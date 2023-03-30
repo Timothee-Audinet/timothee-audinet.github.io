@@ -70,7 +70,7 @@ div {
 
 /*==============TEST==============*/
 .dropdown {
-  float: left;
+  float: auto;
   overflow: hidden;
 }
 
