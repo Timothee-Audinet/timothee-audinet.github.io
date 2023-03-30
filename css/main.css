@@ -86,7 +86,7 @@ div {
 }
 
 .dropdown-content {
-  display: inline-block;/*none*/
+  display: none;
   position: left;
   background-color: #f9f9f9;
   max-width: 16px;
