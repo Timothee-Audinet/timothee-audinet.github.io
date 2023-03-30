@@ -1,0 +1,96 @@
+---
+layout: default
+title: Timothée Audinet
+---
+
+
+ <head>
+	<title>Présentation de photo animalière</title>
+	<style>
+		.container {
+		  width: 100%; 
+		  max-width: 800px;
+		  margin: 0 auto;
+		  display: flex;
+		  flex-wrap: wrap;
+		  justify-content: space-between;
+		  align-items: center;
+		  padding: 20px;
+		}
+		.image-box {
+		  width: 800px;
+		  margin-bottom: 20px;
+		  overflow: hidden;
+		  position: relative;
+		}
+		.image {
+		  width: 100%;
+		  object-fit: cover;
+		  transition: transform 0.5s ease;
+		}
+		.image:hover {
+		  transform: scale(1.2);
+		}
+		.image-overlay {
+		  position: absolute;
+		  top: 0;
+		  left: 0;
+		  width: 100%;
+		  height: 100%;
+		  background-color: rgba(0, 0, 0, 0.5);
+		  display: flex;
+		  flex-direction: column;
+		  justify-content: center;
+		  align-items: center;
+		  opacity: 0;
+		  transition: opacity 0.5s ease;
+		}
+		.image-box:hover .image-overlay {
+		  opacity: 1;
+		}
+		.image-title {
+		  color: #FFF;
+		  font-size: 24px;
+		  font-weight: bold;
+		  margin-bottom: 10px;
+		}
+		.image-caption {
+		  color: #FFF;
+		  font-size: 14px;
+		  font-style: italic;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="image-box">
+			<img class="image" src="/assets/img/gallerie/3X7A0915_ETERLOU ET NARCISSE_TIM_06 05 2018.JPG" alt="Photo 1">
+			<div class="image-overlay">
+				<div class="image-title">Eterlou, jeune isard, dans les névé</div>
+				<div class="image-caption">Photo prise à Belonce</div>
+			</div>
+		</div>
+		<div class="image-box">
+			<img class="image" src="/assets/img/gallerie/VAUTOUR-2022-08-16-3918.jpg" alt="Photo 2">
+			<div class="image-overlay">
+				<div class="image-title">Vautour à l'envol au-dessus des massifs Pyrénéens</div>
+				<div class="image-caption">Photo prise à Belonce</div>
+			</div>
+		</div>
+		<div class="image-box">
+			<img class="image" src="/assets/img/gallerie/LEVER-SOLEIL-2022-11-02-6106.jpg" alt="Photo 3">
+			<div class="image-overlay">
+				<div class="image-title">Lever de soleil sur les Pyrénées</div>
+				<div class="image-caption">Photo prise à Coarraze</div>
+			</div>
+		</div>
+		<div class="image-box">
+			<img class="image" src="/assets/img/gallerie/ISARD-2022-11-13-6417.jpg" alt="Photo 4">
+			<div class="image-overlay">
+				<div class="image-title">Isard en rut</div>
+				<div class="image-caption">Photo prise à Lescun</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
