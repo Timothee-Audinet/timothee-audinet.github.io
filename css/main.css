@@ -81,7 +81,7 @@ div2 {
 .dropbtn {
   background-color: #4CAF50;
   color: white;
-  padding: 16px;
+  padding: 14px 16px;
   font-size: 17px;
   border: none;
   cursor: pointer;
@@ -93,10 +93,10 @@ div2 {
 }
 
 .dropdown .dropbtn {
-  font-size: 16px;
+  font-size: 17px;
   border:none;
   outline:none;
-  color: grey;
+  color: white;
   padding: 14px 16px;
   background-color: inherit;
   font-family: inherit;
