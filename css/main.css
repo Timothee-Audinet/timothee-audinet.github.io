@@ -86,7 +86,7 @@ div {
 }
 
 .dropdown-content {
-  display: none;
+  display: inline-block;/*none*/
   position: left;
   background-color: #f9f9f9;
   max-width: 16px;
@@ -129,21 +129,21 @@ div {
 }
 
 @media screen and (max-width: 16px) {
-  .topnav.responsive {position: relative;}
+  .topnav.responsive {position: left;}/*relative*/
   .topnav.responsive .icon {
-    position: absolute;
+    position: left;/*absolute*/
     right: 0;
     top: 0;
   }
   .topnav.responsive a {
     float: none;
-    display: block;
+    display: inline-block;/*block*/
     text-align: left;
   }
   .topnav.responsive .dropdown {float: none;}
   .topnav.responsive .dropdown-content {position: relative;}
   .topnav.responsive .dropdown .dropbtn {
-    display: block;
+    display: inline-block;/*block*/
     text-align: left;
   }
 }
