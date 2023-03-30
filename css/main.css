@@ -12,6 +12,15 @@ div {
     color:#23373b
 }
 
+div2 {
+    /* width: 100%; */
+    width: 16px;
+    text-align: justify;
+    margin: 0 auto;
+    color:#23373b
+}
+
+
 /* Header/logo Title */
 .header {
   padding: 80px;
