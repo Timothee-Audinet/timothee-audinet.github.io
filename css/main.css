@@ -231,6 +231,9 @@ img {
   .row {
     flex-direction: column;
   }
+  img {
+    width: 80%; /* Set the width of the image to 80% of the screen width */
+    height: auto; /* Maintain the image's aspect ratio */
 } 
 
 /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
