@@ -228,6 +228,12 @@ img {
   body{
     overflow-x: hidden;
   }
+  div {
+    width: 100%;
+    text-align: justify;
+    margin: 0 auto;
+    color:#23373b
+  }
   .row {
     flex-direction: column;
   }
