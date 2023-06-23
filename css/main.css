@@ -228,6 +228,7 @@ img {
 @media only screen and (max-width: 600px) {
   body{
     overflow-x: hidden;
+    width: 100%;
   }
   div {
     width: 100%;
