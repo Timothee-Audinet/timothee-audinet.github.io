@@ -20,6 +20,10 @@ div2 {
     color:#23373b
 }
 
+img {
+	max-width:100%;
+	vertical-align:middle
+}
 
 /* Header/logo Title */
 .header {
