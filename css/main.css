@@ -303,13 +303,13 @@ dl.cv dt {
 position: relative;
 top: 1.25em;
 width: 12em;
-margin: 0 0 5em 0;
+margin: 0 0 2em 0;
 font-weight: bold;
 font-style: italic;
 }
 
 dl.cv dd {
-margin: 0 0 0 14em;/*14em*/
+margin: 0 0 0 2em;/*14em*/
 padding: 0;
 }
 
