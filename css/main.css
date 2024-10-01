@@ -197,6 +197,9 @@ div2 {
   flex: 75%;
   background-color: white;
   padding: 20px;
+  display: flex; /* test */
+  flex-wrap: wrap;  /* Permet d'empiler les images si elles débordent horizontalement */
+}
 }
 
 .column1 {
