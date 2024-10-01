@@ -337,3 +337,34 @@ padding: 0;
 }*/
 /*===================== END =====================*/
 
+
+	
+	
+
+/*===================== TEST =====================*/
+
+/* Style des boutons dans la colonne de gauche */
+.sidebar button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: left;
+}
+
+.sidebar button:hover {
+    background-color: #0056b3;
+}
+
+/* Style pour les images */
+#photos-container img {
+    width: 100%;
+    max-width: 300px;
+    margin: 10px;
+    display: inline-block;
+}
+
