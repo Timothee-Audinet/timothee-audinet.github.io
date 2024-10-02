@@ -344,7 +344,7 @@ padding: 0;
 /*===================== TEST =====================*/
 /* Slideshow container */
 .slideshow-container {
-    max-width: 100%;  /* Garde le slideshow à 100% de la largeur de la partie droite */
+    max-width: 100%;
     position: relative;
     margin: auto;
     box-sizing: border-box;
@@ -353,12 +353,14 @@ padding: 0;
 /* Images dans le slideshow */
 .mySlides {
     display: none;
+    position: relative;
 }
 
+/* Images avec une largeur de 100% et auto pour la hauteur */
 img {
     vertical-align: middle;
-    max-width: 100%;  /* Garde les images à 100% de la largeur du conteneur */
-    height: auto;  /* Assure un redimensionnement propre */
+    max-width: 100%;
+    height: auto;
 }
 
 /* Flèches de navigation */
@@ -368,13 +370,13 @@ img {
     top: 50%;
     width: auto;
     padding: 16px;
-    margin-top: -22px;
     color: white;
     font-weight: bold;
     font-size: 18px;
     transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
     user-select: none;
+    opacity: 0;  /* Les flèches sont invisibles au départ */
+    transition: opacity 0.5s;  /* Transition pour les faire apparaître en douceur */
 }
 
 .next {
@@ -382,8 +384,15 @@ img {
     border-radius: 3px 0 0 3px;
 }
 
-.prev:hover, .next:hover {
-    background-color: rgba(0,0,0,0.8);
+.prev {
+    left: 0;
+    border-radius: 0 3px 3px 0;
+}
+
+/* Apparition des flèches au survol du slideshow */
+.slideshow-container:hover .prev,
+.slideshow-container:hover .next {
+    opacity: 1;  /* Les flèches apparaissent quand on survole */
 }
 
 /* Points/bulles sous le slideshow */
@@ -402,7 +411,7 @@ img {
     background-color: #717171;
 }
 
-/* Animation fade des slides */
+/* Animation de fade pour les slides */
 .fade {
     animation-name: fade;
     animation-duration: 1.5s;
@@ -411,4 +420,24 @@ img {
 @keyframes fade {
     from {opacity: .4} 
     to {opacity: 1}
+}
+
+/* Texte de description sous chaque image */
+.text {
+    color: #f2f2f2;
+    font-size: 18px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.6);  /* Fond noir semi-transparent sous la description */
+}
+
+/* Style pour le texte en gras */
+.text strong {
+    font-weight: bold;
+    font-size: 20px;  /* Plus grand pour le titre */
+    display: block;
+    margin-bottom: 5px;
 }
