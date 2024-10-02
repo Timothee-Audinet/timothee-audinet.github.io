@@ -367,16 +367,20 @@ img {
 .prev, .next {
     cursor: pointer;
     position: absolute;
-    top: 50%;
-    width: auto;
-    padding: 16px;
+    top: 0;
+    width: 20%;  /* Les flèches occupent un cinquième de la largeur */
+    height: 100%; /* Les flèches occupent toute la hauteur de la photo */
     color: white;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 24px;
+    display: flex;
+    align-items: center;  /* Centrer verticalement l'icône */
+    justify-content: center;  /* Centrer horizontalement l'icône */
+    background: rgba(0, 0, 0, 0.2);  /* Fond semi-transparent */
     transition: 0.6s ease;
-    user-select: none;
     opacity: 0;  /* Les flèches sont invisibles au départ */
-    transition: opacity 0.5s;  /* Transition pour les faire apparaître en douceur */
+    user-select: none;
+    z-index: 2;  /* Les flèches doivent apparaître au-dessus de l'image */
 }
 
 .next {
