@@ -14,51 +14,59 @@ title: Timothée Audinet
 		<p> More than theoretical chemistry I am also passionate about wildlife and wildlife photography. I spend most of my free time trying to capture the essence of wildlife and to show them through my picture<br>
     		I hope you will enjoy some of my art<br>
 		</p>
-
-	    <div class="sidebar">
-		<button onclick="showPhotos('landes')">Landes</button>
-            	<button onclick="showPhotos('pyrenees')">Pyrénées</button>
-	    </div>
 	</div>
 
 	
     <div class="main">
-        <!-- Colonne de droite : zone de contenu -->
-        <div class="content">
-            <div id="photos-container">
-                <!-- Les photos vont être affichées ici -->
-                <p>Sélectionnez une destination pour voir les photos.</p>
-            </div>
-        </div>
-    </div>
+    	<div class="slideshow-container">
+    		<div class="mySlides fade">
+        		<img src="/assets/img/gallerie/BROCARD-2022-08-26-4994.jpg" style="width:100%">
+    		</div>
+    		<div class="mySlides fade">
+        		<img src="/assets/img/gallerie/MARTIN-PECHEUR-2022-08-26-5242.jpg" style="width:100%">
+    		</div>
+	<!-- Flèches de navigation -->
+    	<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    	<a class="next" onclick="plusSlides(1)">&#10095;</a>
+	</div>
 
-    <!-- Script pour changer les images affichées -->
-    <script>
-        function showPhotos(folder) {
-            const photosContainer = document.getElementById('photos-container');
-            photosContainer.innerHTML = ''; // On vide d'abord le contenu
+	<!-- Les petits points pour indiquer quelle image est en cours -->
+	<div style="text-align:center">
+  	  <span class="dot" onclick="currentSlide(1)"></span> 
+	  <span class="dot" onclick="currentSlide(2)"></span> 
+ 	  <span class="dot" onclick="currentSlide(3)"></span> 
+	</div>
 
-            // Liste des photos par dossier
-            const photos = {
-                'landes': [
-                    '/assets/img/gallerie/BROCARD-2022-08-26-4994.jpg'
-                ],
-                'pyrenees': [
-                    '/assets/img/gallerie/LEVER-SOLEIL-2022-11-02-6106.jpg'
-                ]
-            };
-
-            // Afficher les photos correspondantes
-            if (photos[folder]) {
-                photos[folder].forEach(photo => {
-                    const img = document.createElement('img');
-                    img.src = photo;
-                    img.alt = `Photo de ${folder}`;
-                    photosContainer.appendChild(img);
-                });
-            }
-        }
-    </script>
+	<!-- Script pour gérer le slideshow -->
+	<script>
+	let slideIndex = 1;
+	showSlides(slideIndex);
+	
+	function plusSlides(n) {
+	  showSlides(slideIndex += n);
+	}
+	
+	function currentSlide(n) {
+	  showSlides(slideIndex = n);
+	}
+	
+	function showSlides(n) {
+	  let i;
+	  let slides = document.getElementsByClassName("mySlides");
+	  let dots = document.getElementsByClassName("dot");
+	  if (n > slides.length) {slideIndex = 1}    
+	  if (n < 1) {slideIndex = slides.length}
+	  for (i = 0; i < slides.length; i++) {
+	    slides[i].style.display = "none";  
+	  }
+	  for (i = 0; i < dots.length; i++) {
+	    dots[i].className = dots[i].className.replace(" active", "");
+	  }
+	  slides[slideIndex-1].style.display = "block";  
+	  dots[slideIndex-1].className += " active";
+	}
+	</script>
+ 
 	</div>
 	
 </body>
