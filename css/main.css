@@ -342,35 +342,73 @@ padding: 0;
 	
 
 /*===================== TEST =====================*/
+/* Slideshow container */
+.slideshow-container {
+    max-width: 100%;  /* Garde le slideshow à 100% de la largeur de la partie droite */
+    position: relative;
+    margin: auto;
+    box-sizing: border-box;
+}
 
-/* Style des boutons dans la colonne de gauche */
-.sidebar button {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    background-color: #007BFF;
-    color: white;
-    border: none;
+/* Images dans le slideshow */
+.mySlides {
+    display: none;
+}
+
+img {
+    vertical-align: middle;
+    max-width: 100%;  /* Garde les images à 100% de la largeur du conteneur */
+    height: auto;  /* Assure un redimensionnement propre */
+}
+
+/* Flèches de navigation */
+.prev, .next {
     cursor: pointer;
-    font-size: 16px;
-    text-align: left;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
 }
 
-.sidebar button:hover {
-    background-color: #0056b3;
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
 }
 
-/* Style pour les images */
-#photos-container {
-    display: flex;
-    flex-wrap: wrap;  /* Permet d'empiler les images correctement */
-    justify-content: flex-start; /* Aligne les images à gauche */
-    gap: 10px;  /* Espacement entre les images */
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
 }
 
-#photos-container img {
-    max-width: 30%;  /* Contraint la largeur des images pour qu'elles ne prennent pas toute la place */
-    height: auto;  /* Maintient le ratio d'aspect des images */
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  /* Ajoute une ombre pour un meilleur visuel */
+/* Points/bulles sous le slideshow */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+/* Animation fade des slides */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
 }
