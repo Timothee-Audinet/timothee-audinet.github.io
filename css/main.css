@@ -316,15 +316,18 @@ dl.cv dd {
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
+/* Masquer le texte de description par défaut */
 .text {
-  color: #f2f2f2;
-  font-size: 18px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
-  background: rgba(0, 0, 0, 0.6);
+    color: #f2f2f2;
+    font-size: 18px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.6); /* Fond noir semi-transparent */
+    opacity: 0;  /* Masquer le texte */
+    transition: opacity 0.5s ease;
 }
 
 .text strong {
@@ -332,6 +335,11 @@ dl.cv dd {
   font-size: 20px;
   display: block;
   margin-bottom: 5px;
+}
+
+/* Faire apparaître le texte quand la souris survole l'image */
+.slideshow-container:hover .text {
+    opacity: 1;  /* Afficher le texte sur hover */
 }
 
 /* Responsive styles */
