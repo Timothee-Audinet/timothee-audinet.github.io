@@ -1,0 +1,100 @@
+---
+layout: default
+title: Timothée Audinet
+---
+
+ <div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'landes')">Landes</button>
+  <button class="tablinks" onclick="openCity(event, 'pyreneess')">Pyrénées</button>
+ </div>
+
+<div id="landes" class="tabcontent">
+  <div class="slideshow-container">
+    		<div class="mySlides fade">
+        		<img src="/assets/img/gallerie/BROCARD-2022-08-26-4994.jpg" style="width:100%">
+			<div class="text">
+            			<strong>Brocard dans les champ landais</strong><br>
+            			Landes de Gascogne, France.
+        		</div>
+    		</div>
+    		<div class="mySlides fade">
+        		<img src="/assets/img/gallerie/MARTIN-PECHEUR-2022-08-26-5242.jpg" style="width:100%">
+			<div class="text">
+            			<strong>Martin Pécheur en brod de Leyre</strong><br>
+            			Landes de Gascogne, France.
+        		</div>
+    		</div>
+	<!-- Flèches de navigation -->
+    	<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    	<a class="next" onclick="plusSlides(1)">&#10095;</a>
+	</div>
+
+	<!-- Les petits points pour indiquer quelle image est en cours -->
+	<div style="text-align:center">
+  	  <span class="dot" onclick="currentSlide(1)"></span> 
+	  <span class="dot" onclick="currentSlide(2)"></span> 
+ 	  <span class="dot" onclick="currentSlide(3)"></span> 
+	</div>
+</div>
+
+<div id="pyrenees" class="tabcontent">
+  <h3>Paris</h3>
+  <p>Paris is the capital of France.</p>
+</div>
+    	
+
+	<!-- Script pour gérer le slideshow -->
+	<!-- JavaScript pour gérer le slideshow -->
+	<script>
+	let slideIndex = 1;
+	showSlides(slideIndex);
+
+	function plusSlides(n) {
+	  showSlides(slideIndex += n);
+	}
+
+	function currentSlide(n) {
+	  showSlides(slideIndex = n);
+	}
+
+	function showSlides(n) {
+	  let i;
+	  let slides = document.getElementsByClassName("mySlides");
+	  let dots = document.getElementsByClassName("dot");
+	  if (n > slides.length) {slideIndex = 1}    
+	  if (n < 1) {slideIndex = slides.length}
+	  for (i = 0; i < slides.length; i++) {
+	    slides[i].style.display = "none";  
+	  }
+	  for (i = 0; i < dots.length; i++) {
+	    dots[i].className = dots[i].className.replace(" active", "");
+	  }
+	  slides[slideIndex-1].style.display = "block";  
+	  dots[slideIndex-1].className += " active";
+	}
+	</script>
+ 
+
+<script>
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+
+	
+</body>
+</html>
+   
