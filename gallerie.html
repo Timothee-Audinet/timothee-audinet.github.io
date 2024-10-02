@@ -21,9 +21,17 @@ title: Timothée Audinet
     	<div class="slideshow-container">
     		<div class="mySlides fade">
         		<img src="/assets/img/gallerie/BROCARD-2022-08-26-4994.jpg" style="width:100%">
+			<div class="text">
+            			<strong>Brocard dans les champ landais</strong><br>
+            			Landes de Gascogne, France.
+        		</div>
     		</div>
     		<div class="mySlides fade">
         		<img src="/assets/img/gallerie/MARTIN-PECHEUR-2022-08-26-5242.jpg" style="width:100%">
+			<div class="text">
+            			<strong>Martin Pécheur en brod de Leyre</strong><br>
+            			Landes de Gascogne, France.
+        		</div>
     		</div>
 	<!-- Flèches de navigation -->
     	<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
@@ -38,18 +46,19 @@ title: Timothée Audinet
 	</div>
 
 	<!-- Script pour gérer le slideshow -->
+	<!-- JavaScript pour gérer le slideshow -->
 	<script>
 	let slideIndex = 1;
 	showSlides(slideIndex);
-	
+
 	function plusSlides(n) {
 	  showSlides(slideIndex += n);
 	}
-	
+
 	function currentSlide(n) {
 	  showSlides(slideIndex = n);
 	}
-	
+
 	function showSlides(n) {
 	  let i;
 	  let slides = document.getElementsByClassName("mySlides");
