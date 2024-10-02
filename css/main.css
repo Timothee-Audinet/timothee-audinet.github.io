@@ -348,6 +348,7 @@ padding: 0;
     position: relative;
     margin: auto;
     box-sizing: border-box;
+    overflow: hidden;  /* Empêche le débordement des éléments en dehors du conteneur */
 }
 
 /* Images dans le slideshow */
@@ -359,7 +360,7 @@ padding: 0;
 /* Images avec une largeur de 100% et auto pour la hauteur */
 img {
     vertical-align: middle;
-    max-width: 100%;
+    width: 100%;
     height: auto;
 }
 
@@ -368,8 +369,8 @@ img {
     cursor: pointer;
     position: absolute;
     top: 0;
-    width: 20%;  /* Les flèches occupent un cinquième de la largeur */
-    height: 100%; /* Les flèches occupent toute la hauteur de la photo */
+    width: 20%;  /* Les flèches prennent 20% de la largeur de l'image */
+    height: 100%;  /* Les flèches couvrent toute la hauteur de l'image */
     color: white;
     font-weight: bold;
     font-size: 24px;
@@ -385,18 +386,26 @@ img {
 
 .next {
     right: 0;
-    border-radius: 3px 0 0 3px;
+    border-radius: 0 3px 3px 0;
 }
 
 .prev {
     left: 0;
-    border-radius: 0 3px 3px 0;
+    border-radius: 3px 0 0 3px;
 }
 
 /* Apparition des flèches au survol du slideshow */
 .slideshow-container:hover .prev,
 .slideshow-container:hover .next {
-    opacity: 1;  /* Les flèches apparaissent quand on survole */
+    opacity: 1;  /* Les flèches apparaissent quand on survole le diaporama */
+}
+
+/* Style pour les flèches sur mobile */
+@media (max-width: 768px) {
+    .prev, .next {
+        width: 25%;  /* Les flèches prennent un peu plus de place sur mobile */
+        font-size: 18px;  /* Taille de la police plus petite pour les flèches sur mobile */
+    }
 }
 
 /* Points/bulles sous le slideshow */
@@ -444,4 +453,28 @@ img {
     font-size: 20px;  /* Plus grand pour le titre */
     display: block;
     margin-bottom: 5px;
+}
+
+/* Conteneur des miniatures */
+.thumbnail-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+/* Style des miniatures */
+.thumbnail {
+    width: 100px;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Effet au survol des miniatures */
+.thumbnail:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
