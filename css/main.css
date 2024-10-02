@@ -335,7 +335,7 @@ dl.cv dd {
 }
 
 /* Responsive styles */
-@media (max-width: 600px) {
+/* @media (max-width: 600px) { 
   body {
     width: 100%;
   }
@@ -353,4 +353,4 @@ dl.cv dd {
     width: 25%;
     font-size: 18px;
   }
-}
+} */
